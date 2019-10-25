@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+                name="handler"
+                type="com.example.luckyface.ui.auth.views.RegisterFragment.DataHandler"/>
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:context=".ui.auth.views.RegisterFragment">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/ll_layout"
+                      android:layout_alignParentBottom="true"
+                      android:orientation="vertical">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/sp18"
+                      android:layout_margin="30dp"
+                      android:textColor="@android:color/black"
+                      android:text="@string/please_enter_all_details_here"
+                      android:fontFamily="serif"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/dp150"
+                    android:layout_height="@dimen/dp150"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:src="@drawable/profile"
+                    android:layout_gravity="center"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+
+            <EditText android:layout_width="match_parent"
+                      android:id="@+id/et_name"
+                      android:layout_marginStart="@dimen/dp40"
+                      android:layout_marginEnd="@dimen/dp40"
+                      android:layout_height="@dimen/dp40"
+                      android:background="@drawable/black_stroke_background"
+                      android:paddingStart="@dimen/dp20"
+                      android:paddingEnd="@dimen/dp20"
+                      android:textSize="@dimen/sp14"
+                      android:maxLines="1"
+                      android:text="@={handler.name}"
+                      android:inputType="textPersonName"
+                      android:hint="Display Name"
+                      android:layout_marginBottom="@dimen/dp20"
+            />
+
+            <EditText android:layout_width="match_parent"
+                      android:id="@+id/et_password"
+                      android:layout_marginStart="@dimen/dp40"
+                      android:layout_height="@dimen/dp40"
+                      android:background="@drawable/black_stroke_background"
+                      android:layout_marginEnd="@dimen/dp40"
+                      android:paddingStart="@dimen/dp20"
+                      android:paddingEnd="@dimen/dp20"
+                      android:textSize="@dimen/sp14"
+                      android:text="@={handler.password}"
+                      android:maxLines="1"
+                      android:inputType="textPassword"
+                      android:hint="@string/password"
+                      android:layout_marginBottom="@dimen/dp20"
+            />
+            <EditText android:layout_width="match_parent"
+                      android:id="@+id/et_Cconfirmpassword"
+                      android:layout_marginStart="@dimen/dp40"
+                      android:layout_height="@dimen/dp40"
+                      android:background="@drawable/black_stroke_background"
+                      android:layout_marginEnd="@dimen/dp40"
+                      android:paddingStart="@dimen/dp20"
+                      android:paddingEnd="@dimen/dp20"
+                      android:textSize="@dimen/sp14"
+                      android:maxLines="1"
+                      android:text="@={handler.confirmPassword}"
+                      android:inputType="textPassword"
+                      android:hint="@string/confirm_password"
+                      android:layout_marginBottom="@dimen/dp10"
+            />
+            <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="@dimen/dp85"
+                    android:layout_height="@dimen/dp35"
+                    android:text="@string/next"
+                    android:layout_gravity="end"
+                    android:textSize="@dimen/sp16"
+                    android:onClick="@{handler::nextButtonClicked}"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_selector"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

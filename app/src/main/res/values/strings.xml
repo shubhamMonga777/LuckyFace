@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Lucky Face</string>
+    <string name="file_provider" translatable="false">com.luckyface.fileprovider</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="famous_logo">Reach for the stars and rise to celebrity status</string>
+    <string name="proceed">Proceed</string>
+    <string name="pick_single">Pick Single</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="send">Send</string>
+    <string name="enter_mobile_number">Enter your Email</string>
+    <string name="p_s_by_continuing_you_are_agreed_to_our_terms_and_conditions">p.s. By continuing you are\nagreed to
+        our
+        terms and\nconditions.
+    </string>
+    <string name="hi_lets_get_started_enter_your_mobile_number_registered_with_luckyface">Hi , Lets get started.\nEnter
+        your
+        Email address\nregistered with LuckyFace.
+    </string>
+    <string name="valid_email">Please enter a valid email.</string>
+    <string name="wrong_email">That does not look like a\nvalid email address.</string>
+    <string name="please_enter_it_below">Please enter it below</string>
+    <string name="resend">ReSend</string>
+    <string name="go_back">Go Back</string>
+    <string name="please_enter_your_password_below">Please enter your password below</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="submit">Submit</string>
+    <string name="please_enter_all_details_here">Please enter all details here</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="next">Next</string>
+    <string name="select_city">Select city</string>
+    <string name="select_state">Select State</string>
+    <string name="enter_pin_code">Enter Pin Code</string>
+    <string name="please_provice_location_details_here_so_we_can_help_you_better">Please provice your location\ndetails
+        here. So we can\nhelp you better.
+    </string>
+    <string name="followers">Followers</string>
+    <string name="profile">Profile</string>
+    <string name="Ddummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has been the industry\'s standard dummy text ever since the 1500s
+    </string>
+    <string name="like">Like</string>
+    <string name="lucky_face_in_your_country">Lucky Face in your country</string>
+</resources>

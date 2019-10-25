@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+                name="viewmodel"
+                type="com.example.luckyface.ui.auth.viewmodel.AuthViewModel"/>
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".ui.auth.views.RegisterP2Fragment">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/ll_layout"
+                      android:layout_alignParentBottom="true"
+                      android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/sp18"
+                      android:layout_margin="30dp"
+                      android:textColor="@android:color/black"
+                      android:text="@string/please_provice_location_details_here_so_we_can_help_you_better"
+                      android:fontFamily="serif"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:id="@+id/tv_state"
+                      android:gravity="center_vertical"
+                      android:text="@={viewmodel.state}"
+                      android:layout_marginStart="@dimen/dp40"
+                      android:layout_marginEnd="@dimen/dp40"
+                      android:layout_height="@dimen/dp40"
+                      android:background="@drawable/black_stroke_background"
+                      android:paddingStart="@dimen/dp20"
+                      android:paddingEnd="@dimen/dp20"
+                      android:textSize="@dimen/sp14"
+                      android:maxLines="1"
+                      android:hint="@string/select_state"
+                      android:layout_marginBottom="@dimen/dp20"
+            />
+
+            <TextView android:layout_width="match_parent"
+                      android:id="@+id/tv_city"
+                      android:gravity="center_vertical"
+                      android:layout_marginStart="@dimen/dp40"
+                      android:layout_marginEnd="@dimen/dp40"
+                      android:text="@={viewmodel.city}"
+                      android:layout_height="@dimen/dp40"
+                      android:background="@drawable/black_stroke_background"
+                      android:paddingStart="@dimen/dp20"
+                      android:paddingEnd="@dimen/dp20"
+                      android:textSize="@dimen/sp14"
+                      android:maxLines="1"
+                      android:hint="@string/select_city"
+                      android:layout_marginBottom="@dimen/dp20"
+            />
+
+            <EditText android:layout_width="match_parent"
+                      android:id="@+id/et_pincode"
+                      android:layout_marginStart="@dimen/dp40"
+                      android:layout_height="@dimen/dp40"
+                      android:background="@drawable/black_stroke_background"
+                      android:layout_marginEnd="@dimen/dp40"
+                      android:text="@={viewmodel.pinCode}"
+                      android:paddingStart="@dimen/dp20"
+                      android:paddingEnd="@dimen/dp20"
+                      android:textSize="@dimen/sp14"
+                      android:maxLines="1"
+                      android:inputType="number"
+                      android:hint="@string/enter_pin_code"
+                      android:layout_marginBottom="@dimen/dp10"
+            />
+            <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="@dimen/dp85"
+                    android:layout_height="@dimen/dp35"
+                    android:text="@string/submit"
+                    android:layout_gravity="end"
+                    android:textSize="@dimen/sp16"
+                    android:onClick="@{viewmodel::submitButtonClicked}"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_selector"
+                    android:layout_marginTop="@dimen/dp10" android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10" android:layout_marginBottom="@dimen/dp10"/>
+
+        </LinearLayout>
+
+        <ProgressBar android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:visibility="gone"
+                     android:layout_centerInParent="true"
+                     android:id="@+id/progress_bar"/>
+    </RelativeLayout>
+</layout>
+

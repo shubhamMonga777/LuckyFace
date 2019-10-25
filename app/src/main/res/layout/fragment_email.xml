@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="viewmodel"
+                type="com.example.luckyface.ui.auth.viewmodel.AuthViewModel" />
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.auth.views.EmailFragment">
+
+
+        <LinearLayout
+                android:id="@+id/ll_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+
+            <TextView
+                    android:id="@+id/tv_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:fontFamily="serif"
+                    android:text="@string/hi_lets_get_started_enter_your_mobile_number_registered_with_luckyface"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp16" />
+
+            <TextView
+                    android:id="@+id/tv_termsConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:fontFamily="serif"
+                    android:text="@string/p_s_by_continuing_you_are_agreed_to_our_terms_and_conditions"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp16" />
+
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_marginStart="@dimen/dp120"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:background="@drawable/black_stroke_background"
+                    android:hint="@string/enter_mobile_number"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/dp20"
+                    android:paddingEnd="@dimen/dp20"
+                    android:text="@={viewmodel.email}"
+                    android:textSize="@dimen/sp14" />
+
+
+            <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="@dimen/dp85"
+                    android:layout_height="@dimen/dp35"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:background="@drawable/btn_selector"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:onClick="@{viewmodel::sendEmailButtonClicked}"
+                    android:text="@string/send"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+    </RelativeLayout>
+</layout>
+

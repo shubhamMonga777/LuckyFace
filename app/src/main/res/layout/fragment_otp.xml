@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/ll_layout"
+
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical" android:layout_marginBottom="0dp">
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/sp16"
+                  android:id="@+id/tv_instruction"
+                  android:layout_marginStart="@dimen/dp15"
+                  android:textColor="@android:color/black"
+                  android:layout_marginBottom="@dimen/dp20"
+                  android:fontFamily="serif"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/sp16"
+                  android:layout_marginStart="@dimen/dp15"
+                  android:textColor="@android:color/black"
+                  android:layout_marginBottom="@dimen/dp30"
+                  android:text="@string/please_enter_it_below"
+                  android:fontFamily="serif"/>
+
+
+        <EditText android:layout_width="match_parent"
+                  android:id="@+id/et_otp"
+                  android:layout_height="@dimen/dp40"
+                  android:background="@drawable/black_stroke_background"
+                  android:layout_marginStart="@dimen/dp120"
+                  android:layout_marginEnd="@dimen/dp10"
+                  android:paddingStart="@dimen/dp20"
+                  android:paddingEnd="@dimen/dp20"
+                  android:textSize="@dimen/sp14"
+                  android:maxLines="1"
+                  android:maxLength="4"
+                  android:inputType="number"
+                  android:hint="Enter 4 digit OTP here"
+                  android:layout_marginBottom="@dimen/dp10"
+        />
+
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="end">
+
+
+            <Button
+                    android:id="@+id/btn_Resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp35"
+                    android:text="@string/resend"
+                    android:textSize="@dimen/sp16"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp10"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/colorAccent"
+                    android:background="@drawable/acent_stroke_background"
+                    android:layout_marginTop="@dimen/dp10" android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10" android:layout_marginBottom="@dimen/dp10"/>
+
+            <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="@dimen/dp85"
+                    android:layout_height="@dimen/dp35"
+                    android:text="@string/submit"
+                    android:textSize="@dimen/sp16"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_selector"
+                    android:layout_marginTop="@dimen/dp10" android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10" android:layout_marginBottom="@dimen/dp10"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

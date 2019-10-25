@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/fragment_profile">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:id="@+id/llAccountInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Account Info"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="@dimen/sp18" />
+
+            <ImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp17"
+                    android:src="@drawable/ic_arrow_down">
+
+            </ImageView>
+        </LinearLayout>
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:el_duration="1000"
+                app:el_expanded="false"
+                app:el_parallax="0.5">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+
+                <RelativeLayout style="@style/profileDetailsLayout">
+
+                    <ImageView
+                            android:id="@+id/nameImageView"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_name" />
+
+                    <TextView
+                            android:id="@+id/nameTextView"
+                            style="@style/profileDetailsTextMain"
+                            android:layout_toRightOf="@id/nameImageView"
+                            android:text="Name" />
+
+                    <TextView
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/nameImageView"
+                            android:text="developer" />
+
+                </RelativeLayout>
+
+                <View style="@style/proifleDetailsView" />
+
+                <RelativeLayout style="@style/profileDetailsLayout">
+
+                    <ImageView
+                            android:id="@+id/mobileImageView"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_mobile" />
+
+                    <TextView
+                            style="@style/profileDetailsTextMain"
+                            android:layout_toRightOf="@id/mobileImageView"
+                            android:text="Mobile" />
+
+                    <TextView
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/mobileImageView"
+                            android:text="+91-9815939543" />
+
+                </RelativeLayout>
+
+                <View style="@style/proifleDetailsView" />
+
+                <RelativeLayout style="@style/profileDetailsLayout">
+
+                    <ImageView
+                            android:id="@+id/emailImageView"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                    <TextView
+                            style="@style/profileDetailsTextMain"
+                            android:layout_toRightOf="@id/emailImageView"
+                            android:text="Email" />
+
+                    <TextView
+                            android:id="@+id/emailTextView"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/emailImageView" />
+
+                </RelativeLayout>
+
+                <View style="@style/proifleDetailsView" />
+
+                <RelativeLayout style="@style/profileDetailsLayout">
+
+                    <ImageView
+                            android:id="@+id/addressImageView"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_address" />
+
+                    <TextView
+                            style="@style/profileDetailsTextMain"
+                            android:layout_toRightOf="@id/addressImageView"
+                            android:text="Address" />
+
+                    <TextView
+                            android:id="@+id/addressTextView"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/addressImageView" />
+
+                </RelativeLayout>
+
+                <View style="@style/proifleDetailsView" />
+
+                <RelativeLayout style="@style/profileDetailsLayout">
+
+                    <ImageView
+                            android:id="@+id/dobImageView"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_dob" />
+
+                    <TextView
+                            style="@style/profileDetailsTextMain"
+                            android:layout_toRightOf="@id/dobImageView"
+                            android:text="D.O.B" />
+
+                    <TextView
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/dobImageView"
+                            android:text="30-09-1996" />
+
+                </RelativeLayout>
+
+                <View style="@style/proifleDetailsView" />
+
+                <RelativeLayout
+                        android:id="@+id/rl_logout"
+                        style="@style/profileDetailsLayout">
+
+                    <ImageView
+                            android:id="@+id/logoutImageview"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_logout" />
+
+                    <TextView
+                            style="@style/profileDetailsTextMain"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/logoutImageview"
+                            android:text="Logout" />
+
+                </RelativeLayout>
+
+                <View style="@style/proifleDetailsView" />
+
+            </LinearLayout>
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10" />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

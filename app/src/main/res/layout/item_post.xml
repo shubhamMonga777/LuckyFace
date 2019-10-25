@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp65"
+                android:layout_marginStart="@dimen/dp5">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="@dimen/dp55"
+                    android:layout_height="@dimen/dp55"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile" />
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_profile"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:text="Shubham Monga"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/sp14" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:text="Android Developer"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/sp12"
+
+                        />
+            </LinearLayout>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+        </RelativeLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp2"
+                android:layout_marginEnd="@dimen/dp5"
+                android:text="@string/Ddummy_text"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/sp14" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_post"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:layout_marginTop="@dimen/dp10"
+                android:scaleType="fitXY" />
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:orientation="horizontal">
+
+            <CheckBox
+                    android:id="@+id/tv_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/like_icon"
+                    android:button="@null"
+                    android:checked="false"
+                    android:stateListAnimator="@animator/scale"
+                    tools:targetApi="lollipop" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_toEndOf="@+id/tv_likes"
+                    android:drawableStart="@drawable/ic_comment_black_24dp"
+                    android:drawablePadding="@dimen/dp5"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/sp12" />
+
+        </RelativeLayout>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:text="1,629 likes"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp12" />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp2"
+                android:text="View All 187 Comments"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/sp12" />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:fontFamily="@font/poppins"
+                android:text="4 hours ago"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/sp10" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
